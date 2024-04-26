@@ -1,370 +1,313 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset = "utf-8">
-<title>Промстан</title>
-<link rel="stylesheet" href="css/style-desktop.css" type="text/css">
-<link rel="stylesheet" href="css/style-mobile.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Промстан</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+	<link rel="icon" href="Ресурсы/logo.png">
 </head>
+
 <body>
-<header>
-<div class=container>
-	<div id=logo><a href=" "><img src="Ресурсы/logo.png" style="width:60px" alt="логотип"></a></div>
-	<div id=menu>
-	<div class="dropdown" onclick="op_menu_p(1);">
-		<div class="drop">Листогибы<div class="triangle"></div></div>
-		<div class="dropdown-content" id=p1>
-			<a href=" ">Листогибы б/у</a>
-		</div>
-	</div>
-	<div class="dropdown" onclick="op_menu_p(2);">
-		<div class="drop">Запчасти для листогибов<div class="triangle"></div></div>
-		<div class="dropdown-content" id=p2>
-			<a href=" ">Запчасти для листогибов Tapco</a>
-			<a href=" ">Запчасти для листогибов Van Mark</a>
-		</div>
-	</div>
-	<div class="dropdown" onclick="op_menu_p(3);">
-		<div class="drop">О компании<div class="triangle"></div></div>
-		<div class="dropdown-content" id=p3>
-			<a href=" ">Доставка</a>
-			<a href=" ">Контакты</a>
-		</div>
-	</div>
-	</div>
-	<div id=menu-new onclick="op_menu();">
-	<span></span>
-	</div>
-	<div id=contacts>
-	<span style="margin:3%">
-	8(800) 505-95-90
-	</span>
-	<span><a href=" "><img src="Ресурсы/телеграмм.png" style="width:40px; margin:3% 3% -3% 3%" alt="телеграмм"></a></span>
-	<span><button class="btngold" style="margin:3% -3% 3% 4%; text-transform:uppercase ">Заказать звонок</button></span>
-	</div>
-</div>
-</header>
-<script>
-				function op_menu(){
-					const menu = document.getElementById('menu');
-					const menu_new = document.getElementById('menu-new');
-						if(menu.classList.contains('active')){						
-						document.getElementsByClassName('dropdown-content')[0].classList.remove('active');
-						document.getElementsByClassName('dropdown-content')[1].classList.remove('active');
-						document.getElementsByClassName('dropdown-content')[2].classList.remove('active');						
-						menu.classList.remove('active');
-						menu_new.classList.remove('active');
-						}
-						else {
-						menu.classList.toggle('active');
-						menu_new.classList.toggle('active');
-						}
-					}
-				function op_menu_p(x){
-					if ((/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) || (window.innerWidth<1000)){
-						const menu = document.getElementById('p'+x);
-							if(menu.classList.contains('active')){
-							menu.classList.remove('active');}
-							else {
-							menu.classList.toggle('active');
-							}
-						}
-					}
-									
-			</script>
-
-<div class="info">
-<div class="path">
-		<div class="container" style="margin:150px 0 20px; ">	
-	<a href=" ">Главная</a>
-	<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
-	<a href=" ">Запчасти</a>
-	<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
-	<a href=" ">Запчасти Tapco</a>
-	<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
-	<a href=" ">Ролик режущий на нож Tapco</a>
-		</div>
-</div>
-	
-<div class="content">
-	<div class="container">
-		<div class="product">
-			<div class="topbar">
-				<div class="slider">
-					<input type="radio" name="switch" id="btn1" checked>
-					<input type="radio" name="switch" id="btn2">
-					<input type="radio" name="switch" id="btn3">
-  
-					<div class="switch">
-						<label for="btn1"></label>
-						<label for="btn2"></label>
-						<label for="btn3"></label>
+	<header>
+		<div class=container>
+			<div id=logo><a href=" "><img src="Ресурсы/logo.png" style="width:60px" alt="логотип"></a></div>
+			<div id=menu>
+				<div class="dropdown" onclick="op_menu_p(1);">
+					<div class="drop">Листогибы<div class="triangle"></div>
 					</div>
-  
-					<div class="slider-inner">
-						<div class="slides">
-							<a data-fancybox="images" data-caption="Ролик - фото 1" href="Ресурсы/ролик1.png"><img src="Ресурсы/ролик1.png" alt="Ролик - фото 1" id="pop1"></a>
-							<a data-fancybox="images" data-caption="Ролик - фото 2" href="Ресурсы/ролик4.jpg"><img src="Ресурсы/ролик4.jpg" alt="Ролик - фото 2" id="pop2"></a>
-							<a data-fancybox="images" data-caption="Ролик - фото 3" href="Ресурсы/ролик3.png"><img src="Ресурсы/ролик3.png" alt="Ролик - фото 3" id="pop3"></a>
-						</div>
+					<div class="dropdown-content" id=p1>
+						<a href=" ">Листогибы б/у</a>
 					</div>
-				</div>				
-			
-				<div class="rightbar">
-				<h2>Ролик режущий на нож Tapco</h2>
-				
-					Производитель: <span>Tapco</span><br>
-					Страна: <span>США</span><br>
-					Гарантия: <span>12 месяцев</span><br>
-					Наличие: <span><i style="color:green; font-weight:bolder;">&#10003; </i>В наличии</span><br><br>
-					<button class="btngold op_popup" id=button>Заказать товар</button>
-				
+				</div>
+				<div class="dropdown" onclick="op_menu_p(2);">
+					<div class="drop">Запчасти для листогибов<div class="triangle"></div>
+					</div>
+					<div class="dropdown-content" id=p2>
+						<a href=" ">Запчасти для листогибов Tapco</a>
+						<a href=" ">Запчасти для листогибов Van Mark</a>
+					</div>
+				</div>
+				<div class="dropdown" onclick="op_menu_p(3);">
+					<div class="drop">О компании<div class="triangle"></div>
+					</div>
+					<div class="dropdown-content" id=p3>
+						<a href=" ">Доставка</a>
+						<a href=" ">Контакты</a>
+					</div>
 				</div>
 			</div>
-			<div class="bottombar">
-				<div class="op">
-					<button id=op onclick="op_har(1);" style="border-bottom:3px solid #e5af26;">Описание</button>
-					<button id=har onclick="op_har(2);">Характеристики</button>
-					<div id="bottominf">Если во время эксплуатации листогиба Tapco Max-20 вышла из строя (или сломалась) какая-либо его часть, и вы не знаете куда обратиться за 
-							помощью — вы попали по адресу. <br><br>Для того, чтобы точно узнать стоимость замены какой-либо детали или узла вам необходимо воспользоваться схемой сборки 
-							и деталировкой листогиба Tapco и определить артикульный номер нужной вам детали. По артикулу вы узнаете стоимость запчасти. Практически все артикульные 
-							позиции имеются в наличии у нас на складах.<br><br>Бывает часто так, что неоходимо заменить на листогибе силиконовую ленту на гибочной балке (или по другому 
-							вставка виниловая) и несколько кулaчков в сборе, которые постоянно участвуют в процессе фиксациии зажима металлического листа и с определенной 
-							периодичностью могут выходить из строя, и в решении этого вопроса производителем данного оборудования был сформирован специальный комплект 
-							расходных материалов. Купив его, клиент выигрывает по стоимости, в сравнении с тем, если покупать каждую позицию по отдельности</div>
+			<div id=menu-new onclick="op_menu();">
+				<span></span>
+			</div>
+			<div id=contacts>
+				<span style="margin:3%">
+					8(800) 505-95-90
+				</span>
+				<span><a href=" "><img src="Ресурсы/телеграмм.png" style="width:40px; margin:3% 3% -3% 3%"
+							alt="телеграмм"></a></span>
+				<span><button class="btngold" style="margin:3% -3% 3% 4%; text-transform:uppercase ">Заказать
+						звонок</button></span>
+			</div>
+		</div>
+	</header>
+
+
+	<main>
+		<div class="path">
+				<a href=" ">Главная</a>
+				<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
+				<a href=" ">Запчасти</a>
+				<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
+				<a href=" ">Запчасти Tapco</a>
+				<span style="color:#e5af26; margin:0 0.5% 0 0.5%;">/</span>
+				<a href=" ">Ролик режущий на нож Tapco</a>
+		</div>
+
+		<div class="content">
+			<div class="container">
+				<div class="product">
+					<div class="topbar">
+						<div class="slider">
+							<input type="radio" name="switch" id="btn1" checked>
+							<input type="radio" name="switch" id="btn2">
+							<input type="radio" name="switch" id="btn3">
+
+							<div class="switch">
+								<label for="btn1"></label>
+								<label for="btn2"></label>
+								<label for="btn3"></label>
+							</div>
+
+							<div class="slider-inner">
+								<div class="slides">
+									<a data-fancybox="images" data-caption="Ролик - фото 1"
+										href="Ресурсы/ролик1.png"><img src="Ресурсы/ролик1.png" alt="Ролик - фото 1"
+											id="pop1"></a>
+									<a data-fancybox="images" data-caption="Ролик - фото 2"
+										href="Ресурсы/ролик4.jpg"><img src="Ресурсы/ролик4.jpg" alt="Ролик - фото 2"
+											id="pop2"></a>
+									<a data-fancybox="images" data-caption="Ролик - фото 3"
+										href="Ресурсы/ролик3.png"><img src="Ресурсы/ролик3.png" alt="Ролик - фото 3"
+											id="pop3"></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="rightbar">
+							<h1>Ролик режущий на нож Tapco</h1>
+
+							Производитель: <span>Tapco</span><br>
+							Страна: <span>США</span><br>
+							Гарантия: <span>12 месяцев</span><br>
+							Наличие: <span><i style="color:green; font-weight:bolder;">&#10003; </i>В
+								наличии</span><br><br>
+							<button class="btngold op_popup" id=button>Заказать товар</button>
+
+						</div>
+					</div>
+					<div class="bottombar">
+						<div class="op">
+							<button id=op onclick="op_har(1);"
+								style="border-bottom:3px solid #e5af26;">Описание</button>
+							<button id=har onclick="op_har(2);">Характеристики</button>
+							<div id="bottominf">Если во время эксплуатации листогиба Tapco Max-20 вышла из строя (или
+								сломалась) какая-либо его часть, и вы не знаете куда обратиться за
+								помощью — вы попали по адресу. <br><br>Для того, чтобы точно узнать стоимость замены
+								какой-либо детали или узла вам необходимо воспользоваться схемой сборки
+								и деталировкой листогиба Tapco и определить артикульный номер нужной вам детали. По
+								артикулу
+								вы узнаете стоимость запчасти. Практически все артикульные
+								позиции имеются в наличии у нас на складах.<br><br>Бывает часто так, что неоходимо
+								заменить
+								на листогибе силиконовую ленту на гибочной балке (или по другому
+								вставка виниловая) и несколько кулaчков в сборе, которые постоянно участвуют в процессе
+								фиксациии зажима металлического листа и с определенной
+								периодичностью могут выходить из строя, и в решении этого вопроса производителем данного
+								оборудования был сформирован специальный комплект
+								расходных материалов. Купив его, клиент выигрывает по стоимости, в сравнении с тем, если
+								покупать каждую позицию по отдельности</div>
+						</div>
+
+					</div>
 				</div>
-			<script>
-				function op_har(x){
-				if (x==1){
-					document.getElementById('bottominf').innerHTML = 'Если во время эксплуатации листогиба Tapco Max-20 вышла из строя (или сломалась) какая-либо его часть, и вы не знаете куда обратиться за помощью — вы попали по адресу.<br><br>Для того, чтобы точно узнать стоимость замены какой-либо детали или узла вам необходимо воспользоваться схемой сборки и деталировкой листогиба Tapco и определить артикульный номер нужной вам детали. По артикулу вы узнаете стоимость запчасти. Практически все артикульные позиции имеются в наличии у нас на складах. <br><br>Бывает часто так, что неоходимо заменить на листогибе силиконовую ленту на гибочной балке (или по другому вставка виниловая) и несколько кулaчков в сборе, которые постоянно участвуют в процессе фиксациии зажима металлического листа и с определенной периодичностью могут выходить из строя, и в решении этого вопроса производителем данного оборудования был сформирован специальный комплект расходных материалов. Купив его, клиент выигрывает по стоимости, в сравнении с тем, если покупать каждую позицию по отдельности';
-					document.getElementById('op').style.borderBottom = "3px solid #e5af26";
-					document.getElementById('har').style.borderBottom = "0";
-				};				
-				if (x==2){
-					document.getElementById('bottominf').innerHTML = 'Характеристик нет';
-					document.getElementById('har').style.borderBottom = "3px solid #e5af26";
-					document.getElementById('op').style.borderBottom = "0";
-				};
-				};
-			</script>
-			</div>
-		</div>
-		<div class="recomend">
-		<h2>Рекомендуемые товары</h2>
-			<div class="rec-slider">
-					<input type="radio" name="rec-switch" id="rec-btn1" checked>
-					<input type="radio" name="rec-switch" id="rec-btn2">
-					<input type="radio" name="rec-switch" id="rec-btn3">
-					<input type="radio" name="rec-switch" id="rec-btn4">
-					<input type="radio" name="rec-switch" id="rec-btn5">
-					<input type="radio" name="rec-switch" id="rec-btn6">
-					<input type="radio" name="rec-switch" id="rec-btn7">
-					<input type="radio" name="rec-switch" id="rec-btn8">
-					<input type="radio" name="rec-switch" id="rec-btn9">
-  
-					<div class="rec-switch">
-						<label for="rec-btn1"></label>
-						<label for="rec-btn2"></label>
-						<label for="rec-btn3"></label>
-						<label for="rec-btn4"></label>
-						<label for="rec-btn5"></label>
-						<label for="rec-btn6"></label>
-						<label for="rec-btn7"></label>
-						<label for="rec-btn8"></label>
-						<label for="rec-btn9"></label>
-					</div>
-  
-					<div class="rec-slider-inner">
-						<div class="rec-slides">
-						<div class=list>
-							<div class=tov>
-								<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
-								<h4>Ролик направляющий для ножа Tapco, металлический1</h4><br>
-								Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>
-							</div>
-							<div class=tov>
-								<img src="Ресурсы/нож.jpg" alt="нож">
-								<h4>Роликовый нож Tapco1</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>						
-							</div>
-							<div class=tov>
-								<img src="Ресурсы/корпус.jpg" alt="корпус">
-								<h4>Корпус для роликового ножа Tapco1</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>							
-							</div>
+				<div class="recomend">
+					<h2>Рекомендуемые товары</h2>
+					<div class="rec-slider">
+						<input type="radio" name="rec-switch" id="rec-btn1" checked>
+						<input type="radio" name="rec-switch" id="rec-btn2">
+						<input type="radio" name="rec-switch" id="rec-btn3">
+						<input type="radio" name="rec-switch" id="rec-btn4">
+						<input type="radio" name="rec-switch" id="rec-btn5">
+						<input type="radio" name="rec-switch" id="rec-btn6">
+						<input type="radio" name="rec-switch" id="rec-btn7">
+						<input type="radio" name="rec-switch" id="rec-btn8">
+						<input type="radio" name="rec-switch" id="rec-btn9">
+
+						<div class="rec-switch">
+							<label for="rec-btn1"></label>
+							<label for="rec-btn2"></label>
+							<label for="rec-btn3"></label>
+							<label for="rec-btn4"></label>
+							<label for="rec-btn5"></label>
+							<label for="rec-btn6"></label>
+							<label for="rec-btn7"></label>
+							<label for="rec-btn8"></label>
+							<label for="rec-btn9"></label>
 						</div>
-						<div class=list>
-							<div class=tov>
-								<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
-								<h4>Ролик направляющий для ножа Tapco, металлический2</h4><br>
-								Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>
+
+						<div class="rec-slider-inner">
+							<div class="rec-slides">
+								<div class=list>
+									<div class=tov>
+										<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
+										<h4>Ролик направляющий для ножа Tapco, металлический1</h4><br>
+										Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/нож.jpg" alt="нож">
+										<h4>Роликовый нож Tapco1</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/корпус.jpg" alt="корпус">
+										<h4>Корпус для роликового ножа Tapco1</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+								</div>
+								<div class=list>
+									<div class=tov>
+										<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
+										<h4>Ролик направляющий для ножа Tapco, металлический2</h4><br>
+										Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/нож.jpg" alt="нож">
+										<h4>Роликовый нож Tapco2</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/корпус.jpg" alt="корпус">
+										<h4>Корпус для роликового ножа Tapco2</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+								</div>
+								<div class=list>
+									<div class=tov>
+										<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
+										<h4>Ролик направляющий для ножа Tapco, металлический3</h4><br>
+										Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/нож.jpg" alt="нож">
+										<h4>Роликовый нож Tapco3</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+									<div class=tov>
+										<img src="Ресурсы/корпус.jpg" alt="корпус">
+										<h4>Корпус для роликового ножа Tapco3</h4><br>
+										<br>
+										<span><button class="btngold">Подробнее</button>
+											<button class="btnblack op_popup">Оформить заказ</button></span>
+									</div>
+								</div>
+
 							</div>
-							<div class=tov>
-								<img src="Ресурсы/нож.jpg" alt="нож">
-								<h4>Роликовый нож Tapco2</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>						
-							</div>
-							<div class=tov>
-								<img src="Ресурсы/корпус.jpg" alt="корпус">
-								<h4>Корпус для роликового ножа Tapco2</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>						
-							</div>
-						</div>
-						<div class=list>
-							<div class=tov>
-								<img src="Ресурсы/ролик2.jpeg" alt="ролик2">
-								<h4>Ролик направляющий для ножа Tapco, металлический3</h4><br>
-								Ролик направляющий подходит на все модели роликовых ножей Tapco<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>
-							</div>
-							<div class=tov>
-								<img src="Ресурсы/нож.jpg" alt="нож">
-								<h4>Роликовый нож Tapco3</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>							
-							</div>
-							<div class=tov>
-								<img src="Ресурсы/корпус.jpg" alt="корпус">
-								<h4>Корпус для роликового ножа Tapco3</h4><br>
-								<br>
-								<span><button class="btngold">Подробнее</button>
-								<button class="btnblack op_popup">Оформить заказ</button></span>						
-							</div>
-						</div>
-							
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="popup_order_bckgr" id="popup_order">
-	<div class="popup_order_close_btn" ><span id="popup_close">x</span></div>
-	<div class="popup_order">
-		<div class="popup_order_content">
-			<h2>Мы вам перезвоним!</h2>
-			<p>Оставьте свой телефон и мы перезвоним Вам в течение 30 минут!</p>
-			<input type="text" placeholder="Номер телефона" id="number" oninput="this.value = this.value.replace (/\D/, '');">
-			<button type="submit" id="order_submit_btn" class="btngold">Отправить</button>
-			* -<a href=""> Нажимая на кнопку, вы даете согласие с политикой конфиденциальности</a>
+		<div class="popup_order_bckgr" id="popup_order">
+			<div class="popup_order_close_btn"><span id="popup_close">&times;</span></div>
+			<div class="popup_order">
+				<div class="popup_order_content">
+					<h2>Мы вам перезвоним!</h2>
+					<p>Оставьте свой телефон и мы перезвоним Вам в течение 30 минут!</p>
+					<input type="text" placeholder="Номер телефона" id="number"
+						oninput="this.value = this.value.replace (/\D/, '');">
+					<button type="submit" id="order_submit_btn" class="btngold">Отправить</button>
+					* -<a href=""> Нажимая на кнопку, вы даете согласие с политикой конфиденциальности</a>
+				</div>
+
+			</div>
+
 		</div>
+	</main>
 
-	</div>
-		
-</div>
-<script>
-	const popup_order = document.getElementById('popup_order');
-	const popup_links = document.querySelectorAll('.op_popup');
-	const popup_close = document.getElementById('popup_close');
-	const submit_btn = document.getElementById('order_submit_btn');
-	
-	
+	<footer>
+		<div class="container">
 
-	const body = document.querySelector('body');
-	
-	if (popup_links.length>0){
-		for (let i=0;i<popup_links.length;i++){
-			const popup_link=popup_links[i];
-			popup_link.addEventListener('click',function(e){
-				popup_order.classList.toggle('open');
-				body.classList.toggle('block');
-				popup_close.addEventListener('click',function(e){
-					popup_order.classList.remove('open');
-				})
-				popup_order.addEventListener('click',function(e){
-					if (!e.target.closest('.popup_order')){
-					popup_order.classList.remove('open');
-					body.classList.remove('block');}
-				})
-				
-			});
-		}
-		submit_btn.addEventListener('click',function(e){
-					const number = document.getElementById('number');
-					if (number.value == '')
-						alert("Поле не заполнено");
-					else {
-						alert("Отправлено!");
-						number.value="";
-						popup_order.classList.remove('open');
-						body.classList.remove('block');
-					}
-					 
-				})
-	}
-	;
-</script>
+			<div class="footer-menu">
+				<ul class="list">
+					<li class="footer-title"><a href=" ">Листогибы</a></li>
+					<li class="footer-list"><a href=" ">Листогибы б/у</a></li>
+				</ul>
+				<ul class="list">
+					<li class="footer-title"><a href=" ">Запчасти для листогибов</a></li>
+					<li class="footer-list"><a href=" ">Запчасти для листогибов Tapco</a></li>
+					<li class="footer-list"><a href=" ">Запчасти для листогибов Van Mark</a></li>
+				</ul>
 
-<footer>
-<div class="container">
-	
-	<div class="footer-menu">
-		<ul class="list">
-			<li class="footer-title"><a href=" ">Листогибы</a></li>
-			<li class="footer-list"><a href=" ">Листогибы б/у</a></li>
-		</ul>
-		<ul class="list">
-			<li class="footer-title"><a href=" ">Запчасти для листогибов</a></li>
-			<li class="footer-list"><a href=" ">Запчасти для листогибов Tapco</a></li>
-			<li class="footer-list"><a href=" ">Запчасти для листогибов Van Mark</a></li>
-		</ul>
-		
-		<ul class="list">
-			<li class="footer-title"><a href=" ">О компании</a></li>
-			<li class="footer-list"><a href=" ">Доставка</a></li>
-			<li class="footer-list"><a href=" ">Контакты</a></li>
-		</ul>
-		
-		<ul class="list">
-			<li class="list-contacts" style="font-size:1.5em">8(800)505-95-90</li>
-			<li class="list-contacts" ><a href=" " style="color:#e5af26">prom.stan2017@yandex.ru</a></li>
-			<li class="list-contacts">
-			<span><a href=" "><img src="Ресурсы/ютуб.png" alt="ютуб" style="width:28px"></a></span>
-			<span><a href=" "><img src="Ресурсы/ватсап.png" alt="ватсап" style="width:28px"></a></span>
-			<span><a href=" "><img src="Ресурсы/телеграмм-серый.png" alt="тг" style="width:30px"></a></span>
-			</li>
-		</ul>
-	</div>
-	
-	<hr>
-	<div class="connection">
-		<div class=c1>
-			<div class=footer-title style="font-size:1.4em; padding:0 0 0.5em 0;">Заказать звонок</div>
-			<div>Оставьте заявку и наш специалист свяжется с Вами</div>		
+				<ul class="list">
+					<li class="footer-title"><a href=" ">О компании</a></li>
+					<li class="footer-list"><a href=" ">Доставка</a></li>
+					<li class="footer-list"><a href=" ">Контакты</a></li>
+				</ul>
+
+				<ul class="list">
+					<li class="list-contacts" style="font-size:1.5em">8(800)505-95-90</li>
+					<li class="list-contacts"><a href=" " style="color:#e5af26">prom.stan2017@yandex.ru</a></li>
+					<li class="list-contacts">
+						<span><a href=" "><img src="Ресурсы/ютуб.png" alt="ютуб" style="width:28px"></a></span>
+						<span><a href=" "><img src="Ресурсы/ватсап.png" alt="ватсап" style="width:28px"></a></span>
+						<span><a href=" "><img src="Ресурсы/телеграмм-серый.png" alt="тг" style="width:30px"></a></span>
+					</li>
+				</ul>
+			</div>
+
+			<hr>
+			<div class="connection">
+				<div class=c1>
+					<div class=footer-title style="font-size:1.4em; padding:0 0 0.5em 0;">Заказать звонок</div>
+					<div>Оставьте заявку и наш специалист свяжется с Вами</div>
+				</div>
+				<div class=c2>
+					<input type=text placeholder="Номер телефона">
+					<button class="btngold btn__c2" style="text-transform:uppercase; width:auto;">Заказать
+						звонок</button>
+					<div style="margin:1% 0 0 1%">Вы соглашаетесь с <a href=" "
+							style="text-decoration:underline;">политикой конфиденциальности</a></div>
+				</div>
+			</div>
+			<hr>
+			<div class="footer-bottom">
+				<div>© Все права защищены ООО “Промстан” 2023</div>
+				<div class="pol"><a href=" ">Политика конфиденциальности</a></div>
+			</div>
 		</div>
-		<div class=c2>
-			<input type=text placeholder="Номер телефона">
-			<button class="btngold btn__c2" style="text-transform:uppercase; width:auto;">Заказать звонок</button>
-			<div style="margin:1% 0 0 1%">Вы соглашаетесь с <a href = " " style="text-decoration:underline;">политикой конфиденциальности</a></div>	
-		</div>
-	</div>
-	<hr>
-	<div class="footer-bottom">
-	<div >© Все права защищены ООО “Промстан” 2023</div>
-	<div class="pol"><a href=" " >Политика конфиденциальности</a></div>
-	</div>
-</div>
-</footer>
-</div>
-
-
+	</footer>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 </body>
+
 </html>
