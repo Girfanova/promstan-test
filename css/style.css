@@ -173,7 +173,7 @@ header .container {
 .container {
 	width: 1280px;
 	position: relative;
-	padding: 0 20px;
+	/* padding: 0 20px; */
 }
 
 .content {
@@ -186,7 +186,8 @@ header .container {
 
 .path {
 	font-size: 1em;
-	margin:150px 2% 2%; 
+	margin:150px auto 2%; 
+	display: flex;
 }
 
 .path .container a:last-child {
@@ -618,6 +619,8 @@ input[type~=text] {
 
 	.path {
 		padding: 0 4%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.slider {
